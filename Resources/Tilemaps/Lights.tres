@@ -1,0 +1,59 @@
+[gd_resource type="TileSet" load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Sprites/Level/OneColorLights.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 1.89289, 0.000630379, 2.07981, 0.841804, 0, 0.841804, 0, 3.73918, 1.3321, 3.83265, 1.42557, 1.86991, 14.7909, 1.96337, 14.8844, 3.73918, 15.9125, 3.73918, 15.819, 0.935267, 13.7628, 1.1222, 13.8563, 0.000630379, 11.7066, 0, 11.987, 0.935267, 4.04255, 0.935267, 3.94909, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 15.6849, 3.73918, 15.0306, 3.73918, 15.0306, 4.95421, 12.0398, 4.86075, 12.1332, 6.73003, 11.0117, 6.91695, 10.8248, 8.03852, 10.077, 8.03852, 10.077, 8.8797, 14.0025, 8.5993, 14.1894, 14.0202, 15.2175, 13.9267, 14.9372, 8.13198, 13.9091, 7.75813, 13.8156, 6.82349, 13.0679, 6.73003, 13.1613, 5.515, 14.9372, 5.88885, 15.0306, 7.01042, 15.9653, 6.82349 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 0.245651, 3.73918, 0.245651, 7.10388, 0.993362, 7.01042, 0.899895, 5.70192, 2.86264, 5.88885, 3.14303, 7.10388, 2.20839, 7.01042, 2.20839, 8.03852, 0.993362, 8.03852, 1.08682, 9.06662, 0.993362, 14.1137, 2.20839, 14.0202, 1.928, 8.69277, 5.76002, 8.69277, 4.91884, 7.19735, 4.07767, 6.82349, 3.70381, 4.86075, 1.18029, 4.95421, 1.18029, 3.92611 )
+
+[resource]
+0/name = "OneColorLights.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "OneColorLights.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 2 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "OneColorLights.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/occluder = SubResource( 3 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0

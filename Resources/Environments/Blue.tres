@@ -1,0 +1,11 @@
+[gd_resource type="Environment" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Colors/BlueGradient.tres" type="Texture" id=1]
+
+[resource]
+background_mode = 4
+background_color = Color( 0.627451, 0.964706, 0.94902, 1 )
+background_canvas_max_layer = -1
+auto_exposure_enabled = true
+adjustment_enabled = true
+adjustment_color_correction = ExtResource( 1 )
