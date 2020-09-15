@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal gotHurt
+signal reachedEnd
+
 # Variables for force pressure on the body (speed)
 export var LeftSpeed = -500
 export var RightSpeed = 500
@@ -80,3 +83,16 @@ func _on_DashTimer_timeout():
 		Movement.x = RightSpeed
 	else:
 		Movement.x = LeftSpeed
+
+
+func _on_Area2D_body_entered(body):
+#	print("AreaEntered")
+	if body.is_in_group("Spikes"):
+#		print("In spike")
+		emit_signal("gotHurt")
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("End"):
+#		print("Made it")
+		emit_signal("reachedEnd")
