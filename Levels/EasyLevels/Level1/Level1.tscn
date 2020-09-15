@@ -1,17 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Resources/Tilemaps/Lights2.tres" type="TileSet" id=1]
 [ext_resource path="res://Resources/Tilemaps/OneColorFloor.tres" type="TileSet" id=2]
 [ext_resource path="res://Resources/Sprites/Level/Light.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Sprites/Level/MostBasicPlatformTiles.png" type="Texture" id=4]
 
-[sub_resource type="OccluderPolygon2D" id=5]
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 2.6737, 0, 2.6737 )
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 2.89801, 0, 2.78585 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=3]
 0/name = "MostBasicPlatformTiles.png 0"
 0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
@@ -19,18 +19,18 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 2.89801, 0, 2.78585 )
 0/region = Rect2( 16, 0, 16, 16 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
-0/occluder = SubResource( 5 )
+0/occluder = SubResource( 1 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 1 )
+0/shape = SubResource( 2 )
 0/shape_one_way = true
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": true,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -49,13 +49,13 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 2.89801, 0, 2.78585 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="OccluderPolygon2D" id=6]
+[sub_resource type="OccluderPolygon2D" id=4]
 polygon = PoolVector2Array( 0, 11.1976, 15.8728, 11.5341, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 12.9921, 16, 12.9921, 16, 16, 0, 16 )
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=6]
 0/name = "MostBasicPlatformTiles.png 0"
 0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
@@ -63,21 +63,24 @@ points = PoolVector2Array( 0, 12.9921, 16, 12.9921, 16, 16, 0, 16 )
 0/region = Rect2( 32, 0, 16, 16 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
-0/occluder = SubResource( 6 )
+0/occluder = SubResource( 4 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 5 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 67.6584, 77.9664 )
 
 [node name="Level1" type="Node2D"]
 
@@ -97,7 +100,7 @@ cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 57.6025, 446.506 )
+position = Vector2( 60.9661, 449.87 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 energy = 2.69
@@ -114,7 +117,7 @@ shadow_enabled = true
 
 [node name="SemiPlatforms" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
-tile_set = SubResource( 2 )
+tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
@@ -122,7 +125,17 @@ format = 1
 "Spikes",
 ]]
 scale = Vector2( 4, 4 )
-tile_set = SubResource( 4 )
+tile_set = SubResource( 6 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 393246, 0, 0, 393247, 0, 0, 393248, 0, 0 )
+
+[node name="End" type="Area2D" parent="." groups=[
+"End",
+]]
+position = Vector2( 2820.58, 381.305 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End" groups=[
+"End",
+]]
+shape = SubResource( 7 )
