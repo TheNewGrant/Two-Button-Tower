@@ -22,6 +22,9 @@ config/icon="res://icon.png"
 [display]
 
 window/size/height=576
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [importer_defaults]
 
@@ -69,6 +72,8 @@ Dash={
 2d_physics/layer_3="Spikes"
 2d_physics/layer_4="Raycast"
 2d_physics/layer_5="Enemies"
+2d_physics/layer_6="Coins"
+2d_physics/layer_7="PowerUps"
 
 [rendering]
 

@@ -1,0 +1,274 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/Menus/Level/LevelSelectHost.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Sprites/UI/BasicButton.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Sprites/UI/DownArrow.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Sprites/UI/UpArrow.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Fonts/super_mario_bros_3/Super-Mario-Bros--3.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_size = 1
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 1026.0
+margin_bottom = 573.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="Margin"]
+margin_right = 1026.0
+margin_bottom = 573.0
+
+[node name="LevelColumn1" type="VBoxContainer" parent="Margin/HBox"]
+margin_right = 1026.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Margin/HBox/LevelColumn1"]
+visible = false
+margin_top = 115.0
+margin_right = 1026.0
+margin_bottom = 226.0
+size_flags_vertical = 3
+text = "Lv6"
+
+[node name="Button4" type="Button" parent="Margin/HBox/LevelColumn1"]
+visible = false
+margin_top = 144.0
+margin_right = 1026.0
+margin_bottom = 284.0
+size_flags_vertical = 3
+text = "Lv11"
+
+[node name="Button3" type="Button" parent="Margin/HBox/LevelColumn1"]
+visible = false
+margin_top = 192.0
+margin_right = 1026.0
+margin_bottom = 380.0
+size_flags_vertical = 3
+text = "Lv16"
+
+[node name="Button5" type="Button" parent="Margin/HBox/LevelColumn1"]
+visible = false
+margin_top = 288.0
+margin_right = 1026.0
+margin_bottom = 573.0
+size_flags_vertical = 3
+text = "Lv21"
+
+[node name="LevelColumn2" type="VBoxContainer" parent="Margin/HBox"]
+visible = false
+margin_left = 206.0
+margin_right = 408.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="Margin/HBox/LevelColumn2"]
+margin_right = 202.0
+margin_bottom = 111.0
+size_flags_vertical = 3
+text = "Lv2"
+
+[node name="Button3" type="Button" parent="Margin/HBox/LevelColumn2"]
+margin_top = 115.0
+margin_right = 202.0
+margin_bottom = 226.0
+size_flags_vertical = 3
+text = "Lv7"
+
+[node name="Button5" type="Button" parent="Margin/HBox/LevelColumn2"]
+margin_top = 230.0
+margin_right = 202.0
+margin_bottom = 341.0
+size_flags_vertical = 3
+text = "Lv12"
+
+[node name="Button4" type="Button" parent="Margin/HBox/LevelColumn2"]
+margin_top = 345.0
+margin_right = 202.0
+margin_bottom = 456.0
+size_flags_vertical = 3
+text = "Lv17"
+
+[node name="Button6" type="Button" parent="Margin/HBox/LevelColumn2"]
+margin_top = 460.0
+margin_right = 202.0
+margin_bottom = 573.0
+size_flags_vertical = 3
+text = "Lv22"
+
+[node name="LevelColumn3" type="VBoxContainer" parent="Margin/HBox"]
+visible = false
+margin_left = 257.0
+margin_right = 510.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="Margin/HBox/LevelColumn3"]
+margin_right = 253.0
+margin_bottom = 111.0
+size_flags_vertical = 3
+text = "Lv3"
+
+[node name="Button4" type="Button" parent="Margin/HBox/LevelColumn3"]
+margin_top = 115.0
+margin_right = 253.0
+margin_bottom = 226.0
+size_flags_vertical = 3
+text = "Lv8"
+
+[node name="Button7" type="Button" parent="Margin/HBox/LevelColumn3"]
+margin_top = 230.0
+margin_right = 253.0
+margin_bottom = 341.0
+size_flags_vertical = 3
+text = "Lv13"
+
+[node name="Button6" type="Button" parent="Margin/HBox/LevelColumn3"]
+margin_top = 345.0
+margin_right = 253.0
+margin_bottom = 456.0
+rect_pivot_offset = Vector2( 928.525, 389.923 )
+size_flags_vertical = 3
+text = "Lv18"
+
+[node name="Button5" type="Button" parent="Margin/HBox/LevelColumn3"]
+margin_top = 460.0
+margin_right = 253.0
+margin_bottom = 573.0
+size_flags_vertical = 3
+text = "Lv23"
+
+[node name="LevelColumn4" type="VBoxContainer" parent="Margin/HBox"]
+visible = false
+margin_left = 343.0
+margin_right = 682.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="Margin/HBox/LevelColumn4"]
+margin_right = 339.0
+margin_bottom = 111.0
+size_flags_vertical = 3
+text = "Lv4"
+
+[node name="Button5" type="Button" parent="Margin/HBox/LevelColumn4"]
+margin_top = 115.0
+margin_right = 339.0
+margin_bottom = 226.0
+size_flags_vertical = 3
+text = "Lv9"
+
+[node name="Button8" type="Button" parent="Margin/HBox/LevelColumn4"]
+margin_top = 230.0
+margin_right = 339.0
+margin_bottom = 341.0
+size_flags_vertical = 3
+text = "Lv14"
+
+[node name="Button7" type="Button" parent="Margin/HBox/LevelColumn4"]
+margin_top = 345.0
+margin_right = 339.0
+margin_bottom = 456.0
+size_flags_vertical = 3
+text = "Lv19"
+
+[node name="Button6" type="Button" parent="Margin/HBox/LevelColumn4"]
+margin_top = 460.0
+margin_right = 339.0
+margin_bottom = 573.0
+size_flags_vertical = 3
+text = "Lv24"
+
+[node name="LevelColumn5" type="VBoxContainer" parent="Margin/HBox"]
+visible = false
+margin_left = 515.0
+margin_right = 1026.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+
+[node name="Button5" type="Button" parent="Margin/HBox/LevelColumn5"]
+margin_right = 511.0
+margin_bottom = 111.0
+size_flags_vertical = 3
+text = "Lv5"
+
+[node name="Button6" type="Button" parent="Margin/HBox/LevelColumn5"]
+margin_top = 115.0
+margin_right = 511.0
+margin_bottom = 226.0
+size_flags_vertical = 3
+text = "Lv10"
+
+[node name="Button8" type="Button" parent="Margin/HBox/LevelColumn5"]
+margin_top = 230.0
+margin_right = 511.0
+margin_bottom = 341.0
+size_flags_vertical = 3
+text = "Lv15"
+
+[node name="Button9" type="Button" parent="Margin/HBox/LevelColumn5"]
+margin_top = 345.0
+margin_right = 511.0
+margin_bottom = 456.0
+size_flags_vertical = 3
+text = "Lv20"
+
+[node name="Button7" type="Button" parent="Margin/HBox/LevelColumn5"]
+margin_top = 460.0
+margin_right = 511.0
+margin_bottom = 573.0
+size_flags_vertical = 3
+text = "Lv25"
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+margin_right = 1026.0
+margin_bottom = 573.0
+
+[node name="UpArrow" type="TextureButton" parent="Margin/VBox"]
+margin_right = 1026.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Margin/VBox"]
+margin_top = 192.0
+margin_right = 1026.0
+margin_bottom = 380.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "LV1"
+flat = true
+
+[node name="DownArrow" type="TextureButton" parent="Margin/VBox"]
+margin_top = 384.0
+margin_right = 1026.0
+margin_bottom = 573.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.483, 285.399 )
+scale = Vector2( 9.66545, 9.66545 )
+texture = ExtResource( 2 )
+[connection signal="pressed" from="Margin/VBox/UpArrow" to="." method="_on_UpArrow_pressed"]
+[connection signal="pressed" from="Margin/VBox/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Margin/VBox/DownArrow" to="." method="_on_DownArrow_pressed"]
