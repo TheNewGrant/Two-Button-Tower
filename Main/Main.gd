@@ -17,28 +17,26 @@ var LoadLevels = preload("res://UI/Menus/Level/LevelSelectHost.tscn")
 var LoadSettings = preload("res://UI/Menus/Setting/Settings.tscn")
 var loadCharacter = preload("res://Player/Player.tscn")
 
+var currentLevel = 0
+
 var InitializeLevels = LoadLevels.instance()
 var InitializeSettings = LoadSettings.instance()
 var initChar = loadCharacter.instance()
-var InitializeSpecificLevel
+var InitializeSpecificLevel = levelLibrary[0]
 
-# Called when the node enters the scene tree for the first time.
+var newLevel = InitializeSpecificLevel.instance()
+
+
 func _ready():
 	randomize()
 	EnvironmentLibrary.shuffle()
 	$WorldEnvironment.set_environment(EnvironmentLibrary[1])
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_Title_PlayButtonPressed():
 	$Title.hide()
 	self.add_child(InitializeLevels)
 	InitializeLevels.connect("levelStarted", self, "on_Level_Started")
-	#print("Worked")
 
 
 func _on_Title_SettingsButtonPressed():
@@ -47,10 +45,26 @@ func _on_Title_SettingsButtonPressed():
 
 
 func on_Level_Started(levelNumber):
+	currentLevel = levelNumber
 	InitializeSpecificLevel = levelLibrary[levelNumber]
-	var newLevel = InitializeSpecificLevel.instance()
+	newLevel = InitializeSpecificLevel.instance()
 	self.add_child(newLevel)
 	$PlayerStartPos.add_child(initChar)
+	initChar.connect("gotHurt", self, "on_Char_Hurt")
+	initChar.connect("reachedEnd", self, "on_Char_Finished")
 	InitializeLevels.hide()
-	#print("Done")
-	
+
+
+func on_Char_Hurt():
+#	print($PlayerStartPos.get_position())
+	initChar.set_global_position($PlayerStartPos.get_position())
+
+
+func on_Char_Finished():
+	self.remove_child(newLevel)
+	#newLevel.queue_free()
+	initChar.set_global_position($PlayerStartPos.get_position())
+	InitializeSpecificLevel = levelLibrary[currentLevel + 1]
+	currentLevel += 1
+	newLevel = InitializeSpecificLevel.instance()
+	self.add_child(newLevel)
