@@ -8,7 +8,7 @@
 script = ExtResource( 4 )
 
 [node name="PlayerStartPos" type="Position2D" parent="."]
-position = Vector2( 119.252, 386.905 )
+position = Vector2( -1.54973, 403.597 )
 
 [node name="Title" parent="." instance=ExtResource( 5 )]
 anchor_left = 0.5
